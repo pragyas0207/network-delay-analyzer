@@ -1,6 +1,6 @@
-# 📡 Network Delay Analyzer (SDN Tool using Ryu)
+#  Network Delay Analyzer (SDN Tool using Ryu)
 
-## 🚀 Overview
+##  Overview
 
 The **Network Delay Analyzer** is a Software Defined Networking (SDN) tool that measures and analyzes network delay (latency) in real time using an SDN controller.
 
@@ -8,18 +8,18 @@ This project uses the Ryu controller along with Mininet to simulate a network an
 
 ---
 
-## 🎯 Features
+## Features
 
-* 📊 Real-time network delay monitoring
-* 🔁 Packet-based delay estimation
-* 🧠 SDN-based centralized control
-* 🗂️ CSV logging for analysis
-* 📈 (Optional) Graph visualization of delay trends
-* 🌐 Works with custom Mininet topologies
+*  Real-time network delay monitoring
+*  Packet-based delay estimation
+*  SDN-based centralized control
+*  CSV logging for analysis
+*  (Optional) Graph visualization of delay trends
+*  Works with custom Mininet topologies
 
 ---
 
-## 🏗️ Project Architecture
+## Project Architecture
 
 ```
 Mininet (Network Emulator)
@@ -35,7 +35,7 @@ Mininet (Network Emulator)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 * Python 3.10
 * Ryu (SDN Controller)
@@ -45,7 +45,7 @@ Mininet (Network Emulator)
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ### 1. Install dependencies
 
@@ -74,7 +74,7 @@ pip install ryu
 
 ---
 
-## ▶️ Usage
+## Usage
 
 ### Step 1: Run the Ryu Controller
 
@@ -119,7 +119,41 @@ mininet> pingall
 <img width="940" height="453" alt="image" src="https://github.com/user-attachments/assets/6d8fa645-649e-46d8-8e7a-d83f8a0076c2" />
 
 
-## 📂 Project Structure
+### Test Scenario 1: Normal vs High Traffic
+
+Under normal traffic conditions, the delay remained low and stable.
+
+<img width="381" height="377" alt="image" src="https://github.com/user-attachments/assets/b4abd44c-bb56-4999-91d9-40b3ca093f4a" />
+
+Under increased traffic load, delay values increased significantly, demonstrating that the tool correctly captures network congestion effects.
+
+<img width="469" height="730" alt="image" src="https://github.com/user-attachments/assets/df48d97b-939b-4418-99db-fe82cea4bd77" />
+
+<img width="267" height="86" alt="image" src="https://github.com/user-attachments/assets/e736f044-15d5-4bf8-8522-8fff9145778f" />
+
+
+### Test Scenario 2: Normal vs Failure
+
+When the network was functioning normally, all hosts communicated successfully and delay values were recorded.
+
+After simulating a link failure, packet loss occurred and communication was disrupted. This demonstrates that the system responds correctly to network failures.
+
+<img width="441" height="213" alt="image" src="https://github.com/user-attachments/assets/63658cf8-f79b-45bb-9c73-9d72366ec887" />
+
+
+## ✅ Validation
+
+The system was validated under multiple conditions:
+
+- Normal traffic → Stable delay
+- High traffic → Increased delay
+- Link failure → Packet loss observed
+
+These tests confirm that the delay monitoring tool behaves correctly under different network conditions.
+
+
+
+## Project Structure
 
 ```
 network-delay-analyzer/
@@ -130,17 +164,17 @@ network-delay-analyzer/
 
 ---
 
-## 📊 Future Improvements
+## Future Improvements
 
-* ⏱️ Accurate RTT-based delay measurement
-* 🌍 Multi-switch delay mapping
-* 📉 Real-time dashboard using Flask
-* 🔔 Alert system for high latency
-* ☁️ Cloud deployment (AWS)
+* Accurate RTT-based delay measurement
+* Multi-switch delay mapping
+* Real-time dashboard using Flask
+* Alert system for high latency
+* Cloud deployment (AWS)
 
 ---
 
-## 💡 Use Cases
+## Use Cases
 
 * Network performance analysis
 * SDN research and experimentation
