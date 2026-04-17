@@ -13,8 +13,6 @@ This project uses the Ryu controller along with Mininet to simulate a network an
 *  Real-time network delay monitoring
 *  Packet-based delay estimation
 *  SDN-based centralized control
-*  CSV logging for analysis
-*  (Optional) Graph visualization of delay trends
 *  Works with custom Mininet topologies
 
 ---
